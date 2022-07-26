@@ -1,0 +1,79 @@
+<select [(ngModel)]="column"  name="allMembers" class="custom-select">
+    <option selected>custom select menu</option>
+    <!-- <option value="GameActivityId">GameActivityId</option> -->
+    <option value="GameActivityTag">GameActivityTag</option>
+    <!-- <option value="GameActivityIdTag">GameActivityIdTag</option>
+    <option value="GameActivityDescription">GameActivityDescription</option>
+    <option value="PublicTeamId">PublicTeamId</option> -->
+    <option value="TeamName">TeamName</option>
+    <option value="StartDate">StartDate</option>
+    <option value="EndDate">EndDate</option>
+    <option value="GenderCode">GenderCode</option>
+    <option value="Gender">Gender</option>
+    <!-- <option value="TeamMemberCount">TeamMemberCount</option>
+    <option value="PlayerCount">PlayerCount</option>
+    <option value="TeamPersonCount">TeamPersonCount</option>
+    <option value="HasUnionTeamConnection">HasUnionTeamConnection</option>
+    <option value="HasSponsorContract">HasSponsorContract</option>
+    <option value="IsPublished">IsPublished</option>
+    <option value="IsUnionTeam">IsUnionTeam</option>
+    <option value="IsDeleteAllowed">IsDeleteAllowed</option>
+    <option value="IsDeactivateAllowed">IsDeactivateAllowed</option>
+    <option value="IsReactivateAllowed">IsReactivateAllowed</option>
+    <option value="IsEditAllowed">IsEditAllowed</option> -->
+</select>
+
+<input [(ngModel)]="filterTerm"/>
+<button (click)="filter()">Search</button>
+<table class="table table-dark stripped">
+    <thead>
+        <tr>
+             <th>GameActivityId</th>
+            <th>GameActivityTag</th>
+            <th>GameActivityIdTag</th>
+            <th>GameActivityDescription</th>
+            <th>PublicTeamId</th>
+            <th>TeamCode</th>
+            <th>TeamName</th>
+            <th>StartDate</th>
+            <th>EndDate</th>
+            <th>GenderCode</th>
+            <th>Gender</th>
+            <th>TeamMemberCount</th>
+            <th>PlayerCount</th>
+            <th>TeamPersonCount</th>
+            <th>HasSponsorContract</th>
+            <th>IsPublished</th>
+            <th>IsUnionTeam</th>
+            <th>IsDeleteAllowed</th>
+            <th>IsDeactivateAllowed</th>
+            <th>IsReactivateAllowed</th>
+            <th>IsEditAllowed</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let member of allMembers">
+            <td>{{ member?.GameActivityId }}</td>
+             <td>{{ member.GameActivityIdTag }}</td>
+            <td>{{ member.GameActivityDescription }}</td>
+            <td>{{ member.PublicTeamId }}</td>
+            <td>{{ member?.TeamName }}</td>
+            <td>{{ member?.StartDate }}</td>
+            <td>{{ member?.EndDate }}</td>
+            <td>{{ member?.GenderCode }}</td>
+            <td>{{ member?.Gender }}</td>
+            <td>{{ member.TeamMemberCount }}</td>
+            <td>{{ member.PlayerCount }}</td>
+            <td>{{ member.TeamPersonCount }}</td>
+            <td>{{ member.HasUnionTeamConnection }}</td>
+            <td>{{ member.HasSponsorContract }}</td>
+            <td>{{ member.IsPublished }}</td>
+            <td>{{ member.IsUnionTeam }}</td>
+            <td>{{ member.IsDeleteAllowed }}</td>
+            <td>{{ member.IsDeactivateAllowed }}</td>
+            <td>{{ member.IsReactivateAllowed }}</td>
+            <td>{{ member.IsEditAllowed }}</td>
+            <td><button (click)="delete()">delete</button></td> 
+        </tr>
+    </tbody>
+</table>
