@@ -28,16 +28,16 @@
 <table class="table table-dark stripped">
     <thead>
         <tr>
-             <th>GameActivityId</th>
+             <!-- <th>GameActivityId</th> -->
             <th>GameActivityTag</th>
-            <th>GameActivityIdTag</th>
+            <!-- <th>GameActivityIdTag</th>
             <th>GameActivityDescription</th>
             <th>PublicTeamId</th>
-            <th>TeamCode</th>
+            <th>TeamCode</th> -->
             <th>TeamName</th>
             <th>StartDate</th>
             <th>EndDate</th>
-            <th>GenderCode</th>
+            <!-- <th>GenderCode</th>
             <th>Gender</th>
             <th>TeamMemberCount</th>
             <th>PlayerCount</th>
@@ -48,19 +48,19 @@
             <th>IsDeleteAllowed</th>
             <th>IsDeactivateAllowed</th>
             <th>IsReactivateAllowed</th>
-            <th>IsEditAllowed</th>
+            <th>IsEditAllowed</th> -->
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let member of allMembers">
-            <td>{{ member?.GameActivityId }}</td>
-             <td>{{ member.GameActivityIdTag }}</td>
-            <td>{{ member.GameActivityDescription }}</td>
-            <td>{{ member.PublicTeamId }}</td>
+            <!-- <td>{{ member?.GameActivityId }}</td> -->
+             <td>{{ member.GameActivityTag }}</td>
+            <!-- <td>{{ member.GameActivityDescription }}</td>
+            <td>{{ member.PublicTeamId }}</td> -->
             <td>{{ member?.TeamName }}</td>
             <td>{{ member?.StartDate }}</td>
             <td>{{ member?.EndDate }}</td>
-            <td>{{ member?.GenderCode }}</td>
+            <!-- <td>{{ member?.GenderCode }}</td>
             <td>{{ member?.Gender }}</td>
             <td>{{ member.TeamMemberCount }}</td>
             <td>{{ member.PlayerCount }}</td>
@@ -72,8 +72,9 @@
             <td>{{ member.IsDeleteAllowed }}</td>
             <td>{{ member.IsDeactivateAllowed }}</td>
             <td>{{ member.IsReactivateAllowed }}</td>
-            <td>{{ member.IsEditAllowed }}</td>
+            <td>{{ member.IsEditAllowed }}</td> -->
             <td><button (click)="delete()">delete</button></td> 
+            <td><button type="button" class="btn btn-success" (click)="save(member)">View Details</button></td>
         </tr>
     </tbody>
 </table>

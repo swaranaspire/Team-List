@@ -31,7 +31,10 @@ export class TeammembersComponent implements OnInit {
       (error: any) => {alert('internal server error')}
     )
    }
-
+    public member: any=[];
+    save(member:any){
+      this.member=member;
+    }
   ngOnInit(): void {
   }
 
