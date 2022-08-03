@@ -20,4 +20,11 @@ describe('TeammembersComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it("testing title",()=>{
+    expect(component.componentName).toBe("teammembers")
+  });
+  it("testing function",()=>{
+    expect(component.sum()).toBe(100)
+  })
+
 });

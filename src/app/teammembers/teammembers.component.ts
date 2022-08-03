@@ -12,7 +12,7 @@ import { TeammemberService } from '../teammember.service';
   styleUrls: ['./teammembers.component.css']
 })
 export class TeammembersComponent implements OnInit {
-   
+    componentName="teammembers";
     public column: string ='';
     public filterTerm: string = '';
   filter(){
@@ -37,5 +37,11 @@ export class TeammembersComponent implements OnInit {
     }
   ngOnInit(): void {
   }
-
+  sum()
+  {
+    //
+    //
+    //
+    return 100
+  }
 }
